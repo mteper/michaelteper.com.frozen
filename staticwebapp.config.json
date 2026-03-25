@@ -1,0 +1,28 @@
+{
+  "mimeTypes": {
+    ".aspx": "text/html"
+  },
+  "routes": [
+    {
+      "route": "/ScriptResource.axd*",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "route": "/WebResource.axd*",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "globalHeaders": {
+    "X-Robots-Tag": "noindex"
+  }
+}
